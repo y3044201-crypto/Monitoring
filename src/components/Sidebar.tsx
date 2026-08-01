@@ -1,14 +1,11 @@
 import React from 'react';
 import { NavTab } from '../types';
 import { 
-  LayoutDashboard, 
   FolderKanban, 
   Layers,
   Users2, 
   Settings, 
-  Zap,
   Radio,
-  Sparkles,
   ChevronRight,
 } from 'lucide-react';
 
@@ -84,28 +81,8 @@ export const Sidebar: React.FC<SidebarProps> = ({ activeTab, onSelectTab, unread
         </nav>
       </div>
 
-      {/* Bottom Futuristic Upgrade / System Card */}
-      <div className="mt-6 pt-4 border-t border-[#1E293B]/80">
-        <div className="relative overflow-hidden bg-gradient-to-br from-[#101C2E] to-[#17253D] border border-cyan-500/20 rounded-2xl p-4 shadow-xl shadow-cyan-950/30">
-          <div className="absolute -right-4 -bottom-4 w-20 h-20 bg-cyan-500/10 rounded-full blur-xl pointer-events-none"></div>
-          <div className="flex items-center gap-2 mb-2">
-            <div className="p-1.5 bg-cyan-500/20 text-cyan-400 rounded-lg border border-cyan-500/30">
-              <Zap className="w-4 h-4" />
-            </div>
-            <span className="text-xs font-bold text-white tracking-wide">Enterprise Core</span>
-          </div>
-          <p className="text-[11px] text-slate-400 leading-relaxed mb-3">
-            OTDR Auto-Sensor Active. All 6 nodes connected to Database Central.
-          </p>
-          <button
-            onClick={() => onSelectTab('settings')}
-            className="w-full py-2 px-3 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-slate-950 font-bold text-xs rounded-xl shadow-md transition-all flex items-center justify-center gap-1.5"
-          >
-            <Sparkles className="w-3.5 h-3.5 fill-current" />
-            <span>Koneksi Database Central</span>
-          </button>
-        </div>
-      </div>
+      {/* Bottom Futuristic Upgrade / System Card (Hidden) */}
+
 
     </aside>
   );
