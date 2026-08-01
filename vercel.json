@@ -9,7 +9,7 @@
     },
     {
       "source": "/api/project-sheet-json",
-      "destination": "https://docs.google.com/spreadsheets/d/1wTolxezKK_KAfaAwe8J8-7nw5mAQWB6-7qrvx4BnxNI/gviz/tq?tqx=out:json&gid=1746107234"
+      "destination": "https://docs.google.com/spreadsheets/d/1wTolxezKK_KAfaAwe8J8-7nw5mAQWB6-7qrvx4BnxNI/gviz/tq?tqx=out%3Ajson&gid=1746107234"
     },
     {
       "source": "/api/volume-sheet",
@@ -17,7 +17,7 @@
     },
     {
       "source": "/api/volume-sheet-json",
-      "destination": "https://docs.google.com/spreadsheets/d/1mcnmLr92VJMsgIZbz1LeiVHMnI43pmB1Q6QOVVlYliA/gviz/tq?tqx=out:json&gid=1393425582"
+      "destination": "https://docs.google.com/spreadsheets/d/1mcnmLr92VJMsgIZbz1LeiVHMnI43pmB1Q6QOVVlYliA/gviz/tq?tqx=out%3Ajson&gid=1393425582"
     },
     {
       "source": "/(.*)",
