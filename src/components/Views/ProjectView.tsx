@@ -189,6 +189,7 @@ export interface ProjectViewProps {
   hideAksiColumn?: boolean;
   hideFilters?: boolean;
   hideHeaderTitle?: boolean;
+  hidePoValueSummary?: boolean;
 }
 
 interface InlineRemarkInputProps {
@@ -474,6 +475,7 @@ export function ProjectView({
   hideAksiColumn = true,
   hideFilters = (viewTitle === 'VOLUME' || viewTitle === 'PROGRES'),
   hideHeaderTitle = (viewTitle === 'VOLUME' || viewTitle === 'PROGRES' || viewTitle.toLowerCase() === 'project'),
+  hidePoValueSummary = (viewTitle === 'VOLUME' || viewTitle === 'PROGRES'),
 }: ProjectViewProps = {}) {
   const [loading, setLoading] = useState<boolean>(true);
   const [error, setError] = useState<string | null>(null);
@@ -1451,12 +1453,14 @@ export function ProjectView({
           </div>
 
           {/* Total Nilai PO Badge */}
-          <div className="flex items-center gap-3 bg-[#101C2E] border border-white/10 px-4 py-2.5 rounded-2xl shadow-lg self-start md:self-auto">
-            <span className="text-xs text-slate-400 font-medium">Total Nilai PO:</span>
-            <span className="text-sm font-bold text-emerald-400 font-mono tracking-wide bg-emerald-500/10 border border-emerald-500/20 px-2.5 py-1 rounded-lg">
-              {formatRupiah(filteredTotalPoValue)}
-            </span>
-          </div>
+          {!hidePoValueSummary && (
+            <div className="flex items-center gap-3 bg-[#101C2E] border border-white/10 px-4 py-2.5 rounded-2xl shadow-lg self-start md:self-auto">
+              <span className="text-xs text-slate-400 font-medium">Total Nilai PO:</span>
+              <span className="text-sm font-bold text-emerald-400 font-mono tracking-wide bg-emerald-500/10 border border-emerald-500/20 px-2.5 py-1 rounded-lg">
+                {formatRupiah(filteredTotalPoValue)}
+              </span>
+            </div>
+          )}
         </div>
       )}
 
@@ -1489,14 +1493,16 @@ export function ProjectView({
               </div>
 
               {/* Total Nilai PO Badge disamping kanan Input Pencarian */}
-              <div className="flex items-center gap-2.5 bg-[#0B132B] border border-emerald-500/30 px-3.5 py-2 rounded-xl shrink-0 shadow-sm">
-                <span className="text-[11px] text-slate-400 font-semibold uppercase tracking-wider whitespace-nowrap">
-                  Total Nilai PO:
-                </span>
-                <span className="text-xs font-bold text-emerald-400 font-mono tracking-wide bg-emerald-500/10 border border-emerald-500/20 px-2.5 py-0.5 rounded-lg whitespace-nowrap">
-                  {formatRupiah(filteredTotalPoValue)}
-                </span>
-              </div>
+              {!hidePoValueSummary && (
+                <div className="flex items-center gap-2.5 bg-[#0B132B] border border-emerald-500/30 px-3.5 py-2 rounded-xl shrink-0 shadow-sm">
+                  <span className="text-[11px] text-slate-400 font-semibold uppercase tracking-wider whitespace-nowrap">
+                    Total Nilai PO:
+                  </span>
+                  <span className="text-xs font-bold text-emerald-400 font-mono tracking-wide bg-emerald-500/10 border border-emerald-500/20 px-2.5 py-0.5 rounded-lg whitespace-nowrap">
+                    {formatRupiah(filteredTotalPoValue)}
+                  </span>
+                </div>
+              )}
             </div>
 
             <div className="flex items-center gap-2 flex-wrap">

@@ -1,6 +1,6 @@
 {
-  "name": "Spreadsheet Web App Manager",
-  "description": "FiberTrack - Premium Enterprise Fiber Optic Network Management System with interactive GIS map, bandwidth traffic analytics, and real-time Google Sheets database sync via Apps Script API.",
+  "name": "TrisnoJoyo PIONX",
+  "description": "FiberTrack - Premium Enterprise Fiber Optic Network Management System with interactive GIS map, bandwidth traffic analytics, and real-time database central sync via Apps Script API.",
   "requestFramePermissions": [],
   "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
 }

@@ -1,0 +1,27 @@
+{
+  "buildCommand": "npm run build",
+  "outputDirectory": "dist",
+  "framework": "vite",
+  "rewrites": [
+    {
+      "source": "/api/project-sheet",
+      "destination": "https://docs.google.com/spreadsheets/d/1wTolxezKK_KAfaAwe8J8-7nw5mAQWB6-7qrvx4BnxNI/export?format=csv&gid=1746107234"
+    },
+    {
+      "source": "/api/project-sheet-json",
+      "destination": "https://docs.google.com/spreadsheets/d/1wTolxezKK_KAfaAwe8J8-7nw5mAQWB6-7qrvx4BnxNI/gviz/tq?tqx=out:json&gid=1746107234"
+    },
+    {
+      "source": "/api/volume-sheet",
+      "destination": "https://docs.google.com/spreadsheets/d/1mcnmLr92VJMsgIZbz1LeiVHMnI43pmB1Q6QOVVlYliA/export?format=csv&gid=1393425582"
+    },
+    {
+      "source": "/api/volume-sheet-json",
+      "destination": "https://docs.google.com/spreadsheets/d/1mcnmLr92VJMsgIZbz1LeiVHMnI43pmB1Q6QOVVlYliA/gviz/tq?tqx=out:json&gid=1393425582"
+    },
+    {
+      "source": "/(.*)",
+      "destination": "/index.html"
+    }
+  ]
+}
